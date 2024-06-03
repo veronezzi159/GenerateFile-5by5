@@ -30,7 +30,7 @@ namespace Repositories
         public bool GenerateXML(List<Infracao> lst, int option)
         {
             string path = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\Documents\\Dados\\";
-            string file = option == 1 ? "Infracoes.xml" : "InfracoesMongo.xml";
+            string file = option == 0 ? "Infracoes.xml" : "InfracoesMongo.xml";
             if (!Directory.Exists(path))
             {
                 Directory.CreateDirectory(path);
@@ -82,7 +82,7 @@ namespace Repositories
                 {
                     Directory.CreateDirectory(path);
                 }
-                string file = option == 1 ? "Infracoes.csv" : "InfracoesMongo.csv";
+                string file = option == 0 ? "Infracoes.csv" : "InfracoesMongo.csv";
 
                 if (!Directory.Exists(path))
                 {
@@ -127,7 +127,7 @@ namespace Repositories
                 string path = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\Documents\\Dados\\";
                 if (!Directory.Exists(path)) Directory.CreateDirectory(path);
 
-                string file = option == 1 ? "Infracoes.json" : "InfracoesMongo.json";
+                string file = option == 0 ? "Infracoes.json" : "InfracoesMongo.json";
 
                 if (!Directory.Exists(path))
                 {
